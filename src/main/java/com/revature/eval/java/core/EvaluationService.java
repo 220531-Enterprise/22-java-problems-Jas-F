@@ -5,8 +5,7 @@ import java.util.Map;
 
 public class EvaluationService {
 
-	/**
-	 * 1.A Speed Converter - Convert to MilesPerHour
+	/**	 * 1.A Speed Converter - Convert to MilesPerHour
 	 * 
 	 * Write a method called toMilesPerHour that has 1 parameter of type double with
 	 * the name kilometersPerHour. This method needs to return the rounded value of
@@ -51,6 +50,19 @@ public class EvaluationService {
 		 */
 		public static String printConversion(double kilometersPerHour) {
 			// TODO Write an implementation for this method declaration
+			
+//			create if statement for less than 0
+			 
+			if (kilometersPerHour < 0) {
+				System.out.println("Invalid Vale");
+			}
+			
+//			Math that converts string
+			long mph = Math.round(kilometersPerHour / 1.609);
+			
+//			create concat string that returns values
+			
+			System.out.println(kilometersPerHour + " kn/h = " + mph + "mi/h");
 			return null;
 		}
 	}
@@ -75,9 +87,23 @@ public class EvaluationService {
 	 * If the parameter kiloBytes is less than 0 then print the text "Invalid
 	 * Value".
 	 */
-	public String printMegaBytesAndKiloBytes(int XX) {
+	public String printMegaBytesAndKiloBytes(int kiloBytes) {
 		// TODO Write an implementation for this method declaration
-		return null;
+		
+//		if statement that catches less than zero
+		
+		if (kiloBytes < 0) {
+			System.out.println("Invalid Value");
+		}
+		
+// 		calculation for kb - mb
+		
+		int mb = kiloBytes / 1000;
+		int kb = kiloBytes % 1000;
+//		concat string to return value
+		
+		return kiloBytes + " KB = " + mb + " MB and " + kb + " KB";
+		
 	}
 
 	/**
@@ -101,8 +127,25 @@ public class EvaluationService {
 	 */
 	public boolean shouldWakeUp(boolean isBarking, int hourOfDay) {
 		// TODO Write an implementation for this method declaration
+		
+//		create if statement to determine if dog is barking at the specified time of day
+		
+		while (isBarking == true) {
+			if (hourOfDay < 8 || hourOfDay> 23) {
+				return true;
+			} else if (hourOfDay < 0 || hourOfDay> 23) {
+			return false;
+			}
+			break;
+			}
 		return false;
-	}
+		}
+		
+//		create if else statement for less than 0 or greater than 23
+		
+//		create else statement for all other cases
+		
+	
 
 	/**
 	 * 4. DecimalComparator
@@ -117,6 +160,12 @@ public class EvaluationService {
 	 */
 	public boolean areEqualByThreeDecimalPlaces(double firstNum, double secondNum) {
 		// TODO Write an implementation for this method declaration
+		
+//		create if statement that compares the decimals and returns true
+		
+		if (firstNum == secondNum) {
+			return true;
+		}
 		return false;
 	}
 
