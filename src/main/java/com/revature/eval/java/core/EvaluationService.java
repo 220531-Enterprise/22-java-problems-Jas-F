@@ -22,7 +22,16 @@ public class EvaluationService {
 
 		public static long toMilesPerHour(double kilometersPerHour) {
 			// TODO Write an implementation for this method declaration
-			return 0;
+//			if statement for less than 0
+			if (kilometersPerHour < 0) {
+				return -1;
+			}
+			
+//			else statemtn for positive. convert to mph and round it
+			
+			long mph = Math.round(kilometersPerHour / 1.609);
+		
+			return mph;
 		}
 
 		/**
