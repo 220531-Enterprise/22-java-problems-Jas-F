@@ -212,6 +212,18 @@ public class EvaluationService {
 	 */
 	public String printYearsAndDays(long minutes) {
 		// TODO Write an implementation for this method declaration
+		
+		if (minutes <= 0) {
+			System.out.println("Invalid Value");
+		} else if (minutes >= 0) {
+			
+			long years = (minutes / 525600);
+			
+			long days = (minutes / 1440);
+			
+			System.out.println(minutes + "min = " + years + " y and " + days + " d" );
+		}
+		
 		return null;
 	}
 
@@ -226,6 +238,65 @@ public class EvaluationService {
 	 */
 	public String printNumberInWord(int number) {
 		// TODO Write an implementation for this method declaration
+		
+		switch (number) {
+		case 0 :
+			System.out.println("ZERO");
+			
+			break;
+			
+		case 1 :
+			System.out.println("ONE");
+			
+			break;
+			
+		case 2 :
+			System.out.println("TWO");
+			
+			break;
+			
+		case 3 :
+			System.out.println("THREE");
+			
+			break;
+			
+		case 4 :
+			System.out.println("FOUR");
+			
+			break;
+			
+		case 5 :
+			System.out.println("FIVE");
+			
+			break;
+			
+		case 6 :
+			System.out.println("SIX");
+			
+			break;
+			
+		case 7 :
+			System.out.println("SEVEN");
+			
+			break;
+			
+		case 8 :
+			System.out.println("EIGHT");
+			
+			break;
+			
+		case 9 :
+			System.out.println("NINE");
+			
+			break;
+			
+		default:
+			System.out.println("OTHER");
+			
+			break;
+		}
+		
+		
 		return null;
 	}
 
@@ -279,6 +350,21 @@ public class EvaluationService {
 	 */
 	public String reverse(String string) {
 		// TODO Write an implementation for this method declaration
+		
+//		empty character value to hold each charater hile transversing emptry string to hold reversed string
+		
+		char ch;
+		String nstr = " ";
+		
+//		for loop that iterates through string
+		for ( int i = 0; i < string.length(); i++) {
+			
+//			add characters to new string in reverse order
+			ch = string.charAt(i);
+			nstr = ch+nstr;
+			
+			
+		}
 		return null;
 	}
 
@@ -291,6 +377,8 @@ public class EvaluationService {
 	 */
 	public String acronym(String phrase) {
 		// TODO Write an implementation for this method declaration
+		
+		
 		return null;
 	}
 
